@@ -1,11 +1,11 @@
 Use the following commands to deploy:
-
-1. helm install trial trychart/ --values trychart/values.yaml
-2. kubectl get all --namespace=dev  -------------> this will display the deployments, services, pods created by step 1.
+1. clone this repo to your local
+1. run the command "helm install trial trychart/ --values trychart/values.yaml"
+2. run the command "kubectl get all --namespace=dev"  -------------> this will display the deployments, services, pods created by step 1.
 
 To check the deployment is working or not, follow the below steps:
 
-1. kubectl get pods -o wide ------> this will display the node ip on which pods are running
+1. run the command "kubectl get pods -o wide" ------> this will display the node ip on which pods are running
 2. take the public ip of the node on which pods are running and paste in browser followed by nodeport number 30010 to get the nginx default deployment page.
    example: publicip_of_node:30010
    
